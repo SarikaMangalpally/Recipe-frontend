@@ -1,8 +1,8 @@
 // src/components/Recipes.tsx
 
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
+// import axios from 'axios';
+import {getRecipes} from '../api';
 interface Recipe {
     id?: number;
     title?: string;
@@ -19,7 +19,7 @@ const Recipes: React.FC = () => {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get<Recipe[]>('http://127.0.0.1:8000/api/recipes/');
+                const response = await getRecipes();
                 setRecipes(response.data);
                 setLoading(false);
             } catch (err) {

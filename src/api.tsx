@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {Recipe} from './types/recipe';
 
-const API_URL = 'http://ec2-54-176-136-218.us-west-1.compute.amazonaws.com/api'
+const API_URL = 'http://ec2-54-176-136-218.us-west-1.compute.amazonaws.com:8000/api'
 
 export const getRecipes = () => {
   return axios.get(`${API_URL}/recipes/`); // Modified URL
