@@ -45,3 +45,29 @@
         src: url('/public/fonts/Poppins-SemiBoldItalic.ttf');
     }
 }
+
+@layer components {
+    .recipe-card-section {
+        @apply rounded-lg shadow-xl shadow-gray-400 drop-shadow-xl border-gray-400;
+    }
+    .recipe-card-section-items-postion {
+        @apply flex flex-col place-items-center justify-center
+    }
+    .perspective-1000 {
+        perspective: 1000px;
+      }
+      
+      .transform-style-preserve-3d {
+        transform-style: preserve-3d;
+      }
+      
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .rotate-y-0 {
+        transform: rotateY(0);
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+}

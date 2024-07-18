@@ -1,5 +1,5 @@
-export type Recipe = {
-    id?: ID;
+export type RecipeType = {
+    id: ID;
     title: string;
     servings: number;
     instructions: string;
