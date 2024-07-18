@@ -34,6 +34,9 @@ const Recipes: React.FC = () => {
 
     return (
         <>
+        {
+            loading?<div>Loading...</div>: error? <div className="text-red-500">{error}</div>: 
+        <>   
             <h1 className='font-poppins-light-italic text-32 uppercase my-12 ml-5 md:ml-12'>Recipes</h1>
             <ul className='w-10/12 max-w-screen-2xl mx-auto my-20 grid sm:grid-cols-2 xl:grid-cols-3 gap-x-2 lg:gap-x-0 gap-y-10 lg:gap-y-14'>
                 {
@@ -44,6 +47,8 @@ const Recipes: React.FC = () => {
                     } )
                 }
             </ul>
+        </>
+        }
         </>
     );
 };
