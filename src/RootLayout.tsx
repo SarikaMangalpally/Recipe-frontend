@@ -3,7 +3,11 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Logo from './components/Logo';
+import LogoComponent from './components/Logo';
+import Instagram from './assets/Instagram.svg';
+import X from './assets/X.svg';
+import Linkedin from './assets/Linkedin.svg';
+import Logo  from './assets/Logo.svg';
 
 const HeaderNavigationItems = [
     {name: 'Home', link: '/'}, 
@@ -12,7 +16,7 @@ const HeaderNavigationItems = [
   ]
 const LogoItems = {
     title: "umahh!!",
-    link: './src/assets/Logo.svg'
+    link: `${Logo}`
   }
 const FooterListItems = {
   title: "umahh!!",
@@ -22,9 +26,9 @@ const FooterListItems = {
     {name: 'Contact', link: '/contact'}
   ], 
   socialLinks: [
-    {name: 'Instagram', link: 'https://www.instagram.com/sarikamadipoju/', imagePath: '/src/assets/Instagram.svg'}, 
-    {name: 'X', link: 'https://www.twitter.com/sarikamadipoju', imagePath: 'src/assets/Linkedin.svg'},
-    {name: 'Linkedin', link: 'https://linkedin.com/in/SarikaMangalpally', imagePath: 'src/assets/X.svg'}
+    {name: 'Instagram', link: 'https://www.instagram.com/sarikamadipoju/', imagePath: `${Instagram}`}, 
+    {name: 'X', link: 'https://www.twitter.com/sarikamadipoju', imagePath: `${Linkedin}`},
+    {name: 'Linkedin', link: 'https://linkedin.com/in/SarikaMangalpally', imagePath:`${X}`}
   ]
 }
 
@@ -32,7 +36,7 @@ const RootLayout = ()=> {
     return <>
     <div className='min-h-screen'>
         <Header>
-            <Logo items={LogoItems}/>
+            <LogoComponent items={LogoItems}/>
             <Navbar items={HeaderNavigationItems}/>
         </Header>
         <Outlet />
