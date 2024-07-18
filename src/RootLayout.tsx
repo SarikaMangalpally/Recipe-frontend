@@ -16,7 +16,7 @@ const HeaderNavigationItems = [
   ]
 const LogoItems = {
     title: "umahh!!",
-    link: `${Logo}`
+    link: Logo
   }
 const FooterListItems = {
   title: "umahh!!",
@@ -26,9 +26,9 @@ const FooterListItems = {
     {name: 'Contact', link: '/contact'}
   ], 
   socialLinks: [
-    {name: 'Instagram', link: 'https://www.instagram.com/sarikamadipoju/', imagePath: `${Instagram}`}, 
-    {name: 'X', link: 'https://www.twitter.com/sarikamadipoju', imagePath: `${Linkedin}`},
-    {name: 'Linkedin', link: 'https://linkedin.com/in/SarikaMangalpally', imagePath:`${X}`}
+    {name: 'Instagram', link: 'https://www.instagram.com/sarikamadipoju/', imagePath: Instagram}, 
+    {name: 'X', link: 'https://www.twitter.com/sarikamadipoju', imagePath: Linkedin},
+    {name: 'Linkedin', link: 'https://linkedin.com/in/SarikaMangalpally', imagePath: X}
   ]
 }
 
