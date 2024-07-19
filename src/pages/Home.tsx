@@ -2,23 +2,35 @@ import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 // import Search from "../components/Search";
 import AddRecipeForm from "../components/AddRecipeForm";
+import Search from "../components/Search";
 interface HomeProps {
 
 }
 const Home: React.FC<HomeProps> = ()=> {
     const navigate = useNavigate();
     const [formVisible, setFormVisibility] = useState(false);
+    const [searchVisibility, setSearchVisibility] = useState(false);
     const handleFormHide = () => {
         setFormVisibility(false);
     }
     const handleSearch =() => {
         console.log('Clicked on search');
+        handleSearchVisibility();
+    }
+    const handleSearchVisibility =() => {
+            setSearchVisibility(!searchVisibility);
     }
     const handleViewRecipes = () => {
+        if (searchVisibility) {
+            handleSearchVisibility();
+        }
         console.log('Clicked on view recipes');
         navigate('/recipes');
     }
     const handleAddRecipe = () => {
+        if (searchVisibility) {
+            handleSearchVisibility();
+        }
         console.log('Clicked on add recipe');
         setFormVisibility(true);
     }
@@ -31,6 +43,7 @@ const Home: React.FC<HomeProps> = ()=> {
         </div>
 
         <AddRecipeForm formVisible = {formVisible} onHide={handleFormHide}/>
+        <Search searchVisible = {searchVisibility}/>
     </>
 }
 export default Home
