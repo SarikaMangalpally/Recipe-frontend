@@ -24,14 +24,6 @@ const Recipes: React.FC = () => {
         fetchRecipes();
     }, []);
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>{error}</div>;
-    }
-
     return (
         <>
         {
