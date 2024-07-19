@@ -7,8 +7,8 @@ const API_URL = 'http://ec2-13-57-8-175.us-west-1.compute.amazonaws.com:8000/api
 export const getRecipes = () => {
   return axios.get(`${API_URL}/recipes/`);
 };
-export const getRecipeById = (id: number) => {
-  return axios.get(`${API_URL}/recipes/${id}/`);
+export const getRecipeByTitle = (title: string) => {
+  return axios.get(`${API_URL}/recipes/${title}/`);
 };
 
 export const createRecipe = (recipe: RecipeType) => {
